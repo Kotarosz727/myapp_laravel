@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'PlaysController@index');
+Route::get('/plays/{id}', 'PlaysController@show');
