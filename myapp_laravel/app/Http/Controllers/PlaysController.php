@@ -7,15 +7,19 @@ use App\Play;
 
 class PlaysController extends Controller
 {
-    function index(){
+    public function index(){
         #$plays = Play::all();
         $plays = Play::latest()->get();
         #dd($plays->toArray());
         return view ('plays.index', ['plays' => $plays]);
     }
 
-    function show($id){
+    public function show($id){
         $play = Play::findOrFail($id);
         return view ('plays.show', ['play' => $play]);
+    }
+
+    public function new(){
+        return view ('plays.new');
     }
 }

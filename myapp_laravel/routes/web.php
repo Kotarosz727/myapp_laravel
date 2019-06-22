@@ -12,4 +12,5 @@
 */
 
 Route::get('/', 'PlaysController@index');
-Route::get('/plays/{id}', 'PlaysController@show');
+Route::get('/plays/new', 'PlaysController@new');
+Route::get('/plays/{id}', 'PlaysController@show')->where('plays','[0-9]+');

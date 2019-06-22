@@ -3,3 +3,13 @@
   margin: auto;
   margin-top: 50px;
 }
+
+input[type="text"], textarea{
+  box-sizing: border-box;
+  width: 400px;
+  padding: 5px;
+}
+
+textarea{
+  height: 100px;
+}
