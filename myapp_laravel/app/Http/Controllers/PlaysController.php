@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Play;
 
 class PlaysController extends Controller
 {
     function index(){
-        return "Hello World";
+        #$plays = Play::all();
+        $plays = Play::latest()->get();
+        dd($plays->toArray());
+        return view ('plays.index');
     }
 }
