@@ -3,11 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>@yield('title')</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
   </head>
   <body>
-    <div class="container">
-     @yield('content')
-    </div>
+    @yield('content')
   </body>
 </html>

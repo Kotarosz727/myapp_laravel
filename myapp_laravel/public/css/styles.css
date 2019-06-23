@@ -4,6 +4,12 @@
   margin-top: 50px;
 }
 
+.container1{
+  width: 500px;
+  margin: auto;
+  margin-top: 50px;
+}
+
 input[type="text"], textarea{
   box-sizing: border-box;
   width: 400px;

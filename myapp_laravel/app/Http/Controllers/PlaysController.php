@@ -22,4 +22,13 @@ class PlaysController extends Controller
     public function new(){
         return view ('plays.new');
     }
+
+    public function create(Request $request){
+        $play = new Play();
+        $play->title = $request->title;
+        $play->arthist = $request->arthist;
+        $play->body = $request->body;
+        $play->save();
+        return redirect('/');
+    }
 }
