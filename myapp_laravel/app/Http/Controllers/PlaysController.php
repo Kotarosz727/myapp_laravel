@@ -31,4 +31,18 @@ class PlaysController extends Controller
         $play->save();
         return redirect('/');
     }
+
+    public function edit (Request $request, $id){
+        $play = Play::find($id);
+        return view('plays.edit', ['play' => $play]);
+    }
+
+    public function update (Request $request) {
+        $play = Play::find($request->id);
+        $play->title = $request->title;
+        $play->arthist = $request->arthist;
+        $play->body = $request->body;
+        $play->save();
+        return redirect('/');    
+    }
 }

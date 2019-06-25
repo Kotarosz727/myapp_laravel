@@ -15,5 +15,5 @@ Route::get('/', 'PlaysController@index');
 Route::get('/plays/new', 'PlaysController@new');
 Route::get('/plays/{id}', 'PlaysController@show')->where('plays','[0-9]+');
 Route::post('/plays', 'PlaysController@create');
-Route::get('/plays/edit', 'PlaysController@edit');
-Route::post('/plays', 'PlaysController@update')
+Route::get('/plays/{id}/edit', 'PlaysController@edit');
+Route::post('/plays/edit', 'PlaysController@update');

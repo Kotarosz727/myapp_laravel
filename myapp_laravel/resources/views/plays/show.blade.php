@@ -10,5 +10,6 @@
     <p>{!! e($play->arthist) !!}</p>
     <p>{{ e($play->body) }}</p>
     <a href="/">戻る</a>
+    <a href='/plays/{{$play->id}}/edit'>編集</a>
   </div>
 @endsection
